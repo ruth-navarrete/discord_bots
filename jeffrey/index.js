@@ -19,8 +19,9 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
+	var t = new Date();
 	console.log(`Logged in as ${client.user.tag}!`);
-	console.log('Ready!');
+	console.log('Ready @ ' + t.getHours() + ':' + t.getMinutes() + ':' + t.getSeconds());
 });
 
 // ping pond basics
@@ -33,7 +34,7 @@ client.on('messageCreate', msg => {
 
 // reminder ping functions
 // cactpot
-let cactpot = new cron.CronJob('58 15 * * *', () => {
+let cactpot = new cron.CronJob('05 16 * * *', () => {
 	client.channels.cache.get('888345534513958923').send(FFXIV_SAT);
 	client.channels.cache.get('888345534513958923').send(fashion_report).then(msg => msg.delete());
 })
