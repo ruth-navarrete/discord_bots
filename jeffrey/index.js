@@ -34,7 +34,7 @@ client.on('messageCreate', msg => {
 
 // reminder ping functions
 // cactpot
-let cactpot = new cron.CronJob('45 18 * * *', () => {
+let cactpot = new cron.CronJob('45 18 * * Sat', () => {
 	client.channels.cache.get('888345534513958923').send(FFXIV_SAT);
 	client.channels.cache.get('888345534513958923').send(fashion_report).then(msg => msg.delete());
 })
