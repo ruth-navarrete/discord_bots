@@ -13,8 +13,8 @@ const FFXIV_SAT = '<@&' + FFXIV_role + '> -- dont forget about cactpot drawing a
 const fashion_report = '!frinfo'
 const FR_NEST = '<@&' + FR_role + '> -- dont forget to incubate nests'
 const FR_PUSH = '<@&' + FR_role + '> -- its a push week, are you able to attend?'
-const ROOMS_W = '<@&' + FR_role + '> -- bababooey its time to steal rooms in rivera for wednesday\nreserve room 320 in rivera\nruth please take the 2 hour slot 4 - 6\nfahed please take the 2 hour slot 6-8'
-const ROOMS_A = '<@&' + FR_role + '> -- bababooey its time to steal rooms in rivera for the week'
+const ROOMS_W = '<@&' + FR_role + '> -- bababooey its time to steal rooms in rivera for **wednesday**\nreserve room **320** in rivera\nruth please take the 2 hour slot 4 - 6\nfahed please take the 2 hour slot 6-8'
+const ROOMS_A = '<@&' + FR_role + '> -- bababooey its time to steal rooms in rivera for the **week**'
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
@@ -46,13 +46,13 @@ let nesting = new cron.CronJob('00 9 * * *', () => {
 	client.channels.cache.get(remind_channel).send(FR_NEST);
 })
 
-// rooms - '01 0 * * Thu'
-let res_w = new cron.CronJob('50 17 * * *', () => {
+// rooms wednesday reminder
+let res_w = new cron.CronJob('53 17 * * *', () => {
 	client.channels.cache.get(remind_channel).send(ROOMS_W);
 })
 
-// rooms - '01 0 * * Sun'
-let res_a = new cron.CronJob('50 17 * * *', () => {
+// rooms weekly reminder
+let res_a = new cron.CronJob('53 17 * * *', () => {
 	client.channels.cache.get(remind_channel).send(ROOMS_A);
 })
 
