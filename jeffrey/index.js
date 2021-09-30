@@ -46,13 +46,13 @@ let nesting = new cron.CronJob('00 9 * * *', () => {
 	client.channels.cache.get('888345534513958923').send(FR_NEST);
 })
 
-// rooms
-let res_w = new cron.CronJob('40 15 * * *', () => {
+// rooms - '01 0 * * Thu'
+let res_w = new cron.CronJob('43 17 * * *', () => {
 	client.channels.cache.get('888345534513958923').send(ROOMS_W);
 })
 
-// rooms
-let res_a = new cron.CronJob('40 15 * * *', () => {
+// rooms - '01 0 * * Sun'
+let res_a = new cron.CronJob('43 17 * * *', () => {
 	client.channels.cache.get('888345534513958923').send(ROOMS_A);
 })
 
@@ -60,6 +60,7 @@ let res_a = new cron.CronJob('40 15 * * *', () => {
 cactpot.start();
 nesting.start();
 res_w.start();
+res_a.start();
 
 // Login to Discord with your client's token
 client.login(token);
