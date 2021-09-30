@@ -13,6 +13,8 @@ const FFXIV_SAT = '<@&' + FFXIV_role + '> -- dont forget about cactpot drawing a
 const fashion_report = '!frinfo'
 const FR_NEST = '<@&' + FR_role + '> -- dont forget to incubate nests'
 const FR_PUSH = '<@&' + FR_role + '> -- its a push week, are you able to attend?'
+const ROOMS_W = '<@&' + FR_role + '> -- bababooey its time to steal rooms in rivera for **wednesday**\nreserve **room 320** in rivera\nruth please take the 2 hour slot 4 - 6\nfahed please take the 2 hour slot 6-8'
+const ROOMS_A = '<@&' + FR_role + '> -- bababooey its time to steal rooms in rivera for **the week**'
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
@@ -44,9 +46,20 @@ let nesting = new cron.CronJob('00 9 * * *', () => {
 	client.channels.cache.get('888345534513958923').send(FR_NEST);
 })
 
+// rooms
+let res_w = new cron.CronJob('37 15 * * *', () => {
+	client.channels.cache.get('888345534513958923').send(ROOMS_W);
+})
+
+// rooms
+let res_a = new cron.CronJob('37 15 * * *', () => {
+	client.channels.cache.get('888345534513958923').send(ROOMS_A);
+})
+
 // start reminder ping functions
 cactpot.start();
 nesting.start();
+res_w.start();
 
 // Login to Discord with your client's token
 client.login(token);
