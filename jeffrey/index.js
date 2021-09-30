@@ -47,12 +47,12 @@ let nesting = new cron.CronJob('00 9 * * *', () => {
 })
 
 // rooms
-let res_w = new cron.CronJob('37 15 * * *', () => {
+let res_w = new cron.CronJob('40 15 * * *', () => {
 	client.channels.cache.get('888345534513958923').send(ROOMS_W);
 })
 
 // rooms
-let res_a = new cron.CronJob('37 15 * * *', () => {
+let res_a = new cron.CronJob('40 15 * * *', () => {
 	client.channels.cache.get('888345534513958923').send(ROOMS_A);
 })
 
