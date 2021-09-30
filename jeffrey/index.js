@@ -47,12 +47,12 @@ let nesting = new cron.CronJob('00 9 * * *', () => {
 })
 
 // rooms wednesday reminder
-let res_w = new cron.CronJob('53 17 * * *', () => {
+let res_w = new cron.CronJob('01 0 * * Thu', () => {
 	client.channels.cache.get(remind_channel).send(ROOMS_W);
 })
 
 // rooms weekly reminder
-let res_a = new cron.CronJob('53 17 * * *', () => {
+let res_a = new cron.CronJob('01 0 * * Sat', () => {
 	client.channels.cache.get(remind_channel).send(ROOMS_A);
 })
 
