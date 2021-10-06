@@ -1,2 +1,2 @@
 # discord_bots
- personal bots
+personal bots
