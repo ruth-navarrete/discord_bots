@@ -13,8 +13,8 @@ const FFXIV_SAT = '<@&' + FFXIV_role + '> -- dont forget about cactpot drawing a
 const fashion_report = '!frinfo'
 const FR_NEST = '<@&' + FR_role + '> -- dont forget to incubate nests'
 const FR_PUSH = '<@&' + FR_role + '> -- its a push week, are you able to attend?'
-const ROOMS_W = '<@&' + FR_role + '> -- bababooey its time to steal rooms in rivera for **wednesday**\nreserve room **320** in rivera\nruth please take the 2 hour slot 4 - 6\nfahed please take the 2 hour slot 6-8'
-const ROOMS_A = '<@&' + FR_role + '> -- bababooey its time to steal rooms in rivera for the **week**'
+const ROOMS_W = '<@&' + FR_role + '> -- bababooey\nits time to steal rooms in rivera for **wednesday**\nreserve room **320** in rivera\n'
+const ROOMS_A = '<@&' + FR_role + '> -- bababooey\nits time to steal rooms in rivera for the **week** in rivera 320\n\nruth please make sure you have: S 2-5 | M 4-7 | T 12-2 | R 12-2\n\nfahed please make sure you have W 5-8'
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
