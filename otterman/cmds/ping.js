@@ -1,5 +1,10 @@
 const Command = require('../structs/cmd.js');
 
+// ping command
+// responds to message with ping and message ping
+// input: $ping
+// output: ping and message ping
+
 module.exports = new Command({
     name: 'ping',
     description: 'shows ping of bot',

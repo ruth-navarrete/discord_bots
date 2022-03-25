@@ -1,6 +1,12 @@
 const Command = require('../structs/cmd.js');
 const Discord = require('discord.js');
 
+// embed command
+// create an embed
+// input: $embed [create/edit] | [title] | [description]
+// create output: a new embed
+// edit output: [current: new embed] | [goal: edit existing embed]
+
 module.exports = new Command({
     name: 'embed',
     description: 'shows',
