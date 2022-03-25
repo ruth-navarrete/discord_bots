@@ -15,3 +15,6 @@ personal bots
         * stops after *x* reminders
         * stops after *y* calendar day
   * input: $remind [crontab format] | [reminder text] | [*type*] | [*arguments*]
+  * example: $remind `*:*:14:30:Sat` | sample text | indefinite
+    * month cal_day hour min week_day
+    * remind me every month, regardless of the calendar day, at 14:30 every Saturday
