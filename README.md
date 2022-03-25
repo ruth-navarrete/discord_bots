@@ -14,4 +14,4 @@ personal bots
       * finite reminder
         * stops after *x* reminders
         * stops after *y* calendar day
-  * input: $remind
+  * input: $remind [crontab format] | [reminder text] | [*type*] | [*arguments*]
