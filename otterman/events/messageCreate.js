@@ -1,6 +1,7 @@
 const Event = require('../structs/event.js');
 
 // command calling handler
+
 module.exports = new Event('messageCreate', (client, msg) => {
 	// fail safe for correct prefix
     if (!msg.content.startsWith(client.prefix)) return;
